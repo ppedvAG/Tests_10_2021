@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.QualityTools.Testing.Fakes;
+
+using System;
 using Xunit;
 
 namespace TDDBank.Tests
@@ -20,6 +22,43 @@ namespace TDDBank.Tests
             var oh = new OpeningHours();
 
             Assert.Equal(result, oh.IsOpen(dt));
+        }
+
+        [Fact]
+        public void IsWeekend()
+        {
+            var oh = new OpeningHours();
+
+            using (ShimsContext.Create())
+            {
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 10, 4, 12, 30, 0);
+                Assert.False(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 10, 5, 12, 30, 0);
+                Assert.False(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 10, 6, 12, 30, 0);
+                Assert.False(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 10, 7, 12, 30, 0);
+                Assert.False(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 10, 8, 12, 30, 0);
+                Assert.False(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 10, 9, 12, 30, 0);
+                Assert.True(oh.IsWeekend());
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(2021, 10, 10, 12, 30, 0);
+                Assert.True(oh.IsWeekend());
+            }
+
+        }
+
+        [Fact]
+        public void GetInfoFromFile()
+        {
+            var oh = new OpeningHours();
+
+            using (ShimsContext.Create())
+            {
+                System.IO.Fakes.ShimFile.ReadAllTextString = fileName => "Bier";
+                Assert.Equal("Bier", oh.GetInfoFromFile());
+            }
         }
     }
 }

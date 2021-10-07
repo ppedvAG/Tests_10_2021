@@ -22,7 +22,7 @@ namespace TDDBank
             if (v > Balance)
                 throw new InvalidOperationException();
 
-            Balance -= v;
+            Balance -= v; 
         }
     }
 }
