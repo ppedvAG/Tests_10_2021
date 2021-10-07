@@ -33,6 +33,7 @@ namespace Calculator.Tests
         }
 
         [TestMethod]
+        [TestCategory("ExceptionTest")]
         public void Sum_MAX_and_1_throws_OverflowException()
         {
             Calc calc = new Calc();
@@ -50,8 +51,18 @@ namespace Calculator.Tests
             Calc calc = new Calc();
 
             var result = calc.Sum(a, b);
-            
+
             Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void Calc_Minus()
+        {
+            Calc calc = new Calc();
+
+            var result = calc.Minus(10, 4);
+
+            Assert.AreEqual(6, result);
         }
     }
 }

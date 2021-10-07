@@ -19,6 +19,7 @@ namespace Calculator.Tests_NUnit
         }
 
         [Test]
+        [Category("ExceptionTest")]
         public void Sum_MIN_and_n1_throws_OverflowException()
         {
             Calc calc = new Calc();
