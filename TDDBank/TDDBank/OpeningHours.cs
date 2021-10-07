@@ -1,4 +1,7 @@
-﻿namespace TDDBank
+﻿using System;
+using System.Collections.Generic;
+
+namespace TDDBank
 {
     public class OpeningHours
     {

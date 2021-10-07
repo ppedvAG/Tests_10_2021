@@ -1,4 +1,6 @@
-﻿namespace TDDBank
+﻿using System;
+
+namespace TDDBank
 {
     public class BankAccount
     {
