@@ -1,10 +1,18 @@
-﻿using ppedv.GMV.Data.EfCore;
-using ppedv.GMV.Model;
+﻿using ppedv.GMV.Model;
+using ppedv.GMV.Model.Contracts;
 
 namespace ppedv.GMV.Logic
 {
     public class Core
     {
+
+        public IRepository Repository { get; }
+
+        public Core(IRepository repository)
+        {
+            Repository = repository;
+        }
+
         public IEnumerable<Messwert> GetMesswerteOfGerät(Gerät gerät)
         {
             if (gerät == null)
@@ -16,10 +24,11 @@ namespace ppedv.GMV.Logic
 
         public Gerät GetGerätWithHighestMesswert()
         {
-            var con = new EfContext("Server=(localdb)\\mssqllocaldb;Database=GMV;Trusted_Connection=true");
-            return con.Messwerte.OrderBy(x => x.Wert)
-                                .FirstOrDefault()
-                                .Messung.Gerät;
+            return Repository.GetAll<Messwert>()
+                             .OrderBy(x => x.Wert)
+                             .FirstOrDefault()
+                             .Messung
+                             .Gerät;
         }
 
     }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.GMV.Logic", "ppedv.GM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.GMV.Logic.Tests", "ppedv.GMV.Logic.Tests\ppedv.GMV.Logic.Tests.csproj", "{0932367F-AFEF-4C5E-89A6-9EAFC2B6C893}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.GMV.UI.DevConsole", "ppedv.GMV.UI.DevConsole\ppedv.GMV.UI.DevConsole.csproj", "{E512509D-888C-454D-A782-6FC5BB236B62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0932367F-AFEF-4C5E-89A6-9EAFC2B6C893}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0932367F-AFEF-4C5E-89A6-9EAFC2B6C893}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0932367F-AFEF-4C5E-89A6-9EAFC2B6C893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E512509D-888C-454D-A782-6FC5BB236B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E512509D-888C-454D-A782-6FC5BB236B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E512509D-888C-454D-A782-6FC5BB236B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E512509D-888C-454D-A782-6FC5BB236B62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

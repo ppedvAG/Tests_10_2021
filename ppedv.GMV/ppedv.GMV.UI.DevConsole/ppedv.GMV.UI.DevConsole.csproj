@@ -1,12 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ppedv.GMV.Data.EfCore\ppedv.GMV.Data.EfCore.csproj" />
+    <ProjectReference Include="..\ppedv.GMV.Logic\ppedv.GMV.Logic.csproj" />
     <ProjectReference Include="..\ppedv.GMV.Model\ppedv.GMV.Model.csproj" />
   </ItemGroup>
 

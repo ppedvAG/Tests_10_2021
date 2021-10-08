@@ -22,7 +22,7 @@ namespace ppedv.GMV.Logic.Tests
             g.Messungen.Add(m1);
             g.Messungen.Add(m2);
 
-            var core = new Core();
+            var core = new Core(null);
             var result = core.GetMesswerteOfGerät(g);
 
             result.Should().HaveCount(6);
@@ -31,7 +31,7 @@ namespace ppedv.GMV.Logic.Tests
         [Fact]
         public void GetMesswerteOfGerät_gerät_NULL_should_thow_ArgumentNullException()
         {
-            var core = new Core();
+            var core = new Core(null);
             var act = () => core.GetMesswerteOfGerät(null);
 
             act.Should().Throw<ArgumentNullException>();
@@ -40,7 +40,7 @@ namespace ppedv.GMV.Logic.Tests
         [Fact]
         public void GetGerätWithHighestMesswert__()
         {
-            var core = new Core();
+            var core = new Core(null);
             var result =  core.GetGerätWithHighestMesswert();
 
             result.Should().NotBeNull();
