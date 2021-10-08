@@ -5,7 +5,6 @@ namespace ppedv.GMV.Logic
 {
     public class Core
     {
-
         public IRepository Repository { get; }
 
         public Core(IRepository repository)
@@ -26,6 +25,7 @@ namespace ppedv.GMV.Logic
         {
             return Repository.GetAll<Messwert>()
                              .OrderByDescending(x => x.Wert)
+                             .ThenBy(x => x.Messung.Datum)
                              .FirstOrDefault()
                              .Messung
                              .Gerät;
