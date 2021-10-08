@@ -1,0 +1,29 @@
+﻿<Window x:Class="ppedv.GMV.UI.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ppedv.GMV.UI.Wpf"
+        xmlns:views="clr-namespace:ppedv.GMV.UI.Wpf.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Datei">
+                <MenuItem Header="Öffnen"/>
+                <Separator/>
+                <MenuItem Header="Beenden"/>
+            </MenuItem>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom" 
+                   Height="22"
+                   Background="MediumAquamarine"/>
+        <TabControl>
+            <TabItem Header="Messwerte">
+                <views:MesswerteView/>
+            </TabItem>
+            <TabItem Header="Geräte"/>
+            <TabItem Header="Messungen"/>
+        </TabControl>
+    </DockPanel>
+</Window>

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.GMV.Data.EfCore\ppedv.GMV.Data.EfCore.csproj" />
+    <ProjectReference Include="..\ppedv.GMV.Logic\ppedv.GMV.Logic.csproj" />
+    <ProjectReference Include="..\ppedv.GMV.Model\ppedv.GMV.Model.csproj" />
+  </ItemGroup>
+
+</Project>
