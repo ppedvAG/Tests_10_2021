@@ -23,5 +23,10 @@ namespace ppedv.GMV.Data.EfCore
 
             optionsBuilder.UseSqlServer(_conString).UseLazyLoadingProxies();
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<Gerät>().Ignore(x => x.Wichtig);
+        }
     }
 }

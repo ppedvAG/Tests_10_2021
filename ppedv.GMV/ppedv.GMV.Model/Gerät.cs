@@ -6,6 +6,8 @@
         public string Hersteller { get; set; }
         public string Typ { get; set; }
 
+        //public int Wichtig { get; set; }
+
         public virtual ICollection<Messung> Messungen { get; set; } = new HashSet<Messung>();
     }
 

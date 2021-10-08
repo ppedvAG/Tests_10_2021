@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.GMV.Model", "ppedv.GM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.GMV.Data.EfCore", "ppedv.GMV.Data.EfCore\ppedv.GMV.Data.EfCore.csproj", "{5CDCBF3A-575F-4FFC-9610-2EA7F337B298}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.GMV.Data.EfCore.Tests", "ppedv.GMV.Data.EfCore.Tests\ppedv.GMV.Data.EfCore.Tests.csproj", "{4DAA67D2-94BF-4DC3-81BC-5DD13539C498}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5CDCBF3A-575F-4FFC-9610-2EA7F337B298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CDCBF3A-575F-4FFC-9610-2EA7F337B298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CDCBF3A-575F-4FFC-9610-2EA7F337B298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DAA67D2-94BF-4DC3-81BC-5DD13539C498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAA67D2-94BF-4DC3-81BC-5DD13539C498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAA67D2-94BF-4DC3-81BC-5DD13539C498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAA67D2-94BF-4DC3-81BC-5DD13539C498}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
