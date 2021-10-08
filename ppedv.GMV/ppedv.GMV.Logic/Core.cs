@@ -25,7 +25,7 @@ namespace ppedv.GMV.Logic
         public Gerät GetGerätWithHighestMesswert()
         {
             return Repository.GetAll<Messwert>()
-                             .OrderBy(x => x.Wert)
+                             .OrderByDescending(x => x.Wert)
                              .FirstOrDefault()
                              .Messung
                              .Gerät;

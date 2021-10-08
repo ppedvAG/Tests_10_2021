@@ -40,11 +40,11 @@ namespace ppedv.GMV.Logic.Tests
         [Fact]
         public void GetGerätWithHighestMesswert__()
         {
-            var core = new Core(null);
-            var result =  core.GetGerätWithHighestMesswert();
+            var core = new Core(new TestRepository());
+            var result = core.GetGerätWithHighestMesswert();
 
             result.Should().NotBeNull();
+            result.Hersteller.Should().Be("g2");
         }
-
     }
 }
